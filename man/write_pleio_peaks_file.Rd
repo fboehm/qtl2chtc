@@ -4,8 +4,7 @@
 \alias{write_pleio_peaks_file}
 \title{Create a pleiotropy peaks file with the marker indices - that designate the pleiotropy peak position - for each of a collection of trait files}
 \usage{
-write_pleio_peaks_file(run_num, map = pm,
-  DIR = paste0("results-chtc/pvl400-run"))
+write_pleio_peaks_file(run_num, map, DIR = paste0("results-chtc/pvl400-run"))
 }
 \arguments{
 \item{run_num}{run number, a positive integer}

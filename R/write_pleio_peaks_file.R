@@ -4,8 +4,9 @@
 #' @param map a map for the corresponding chromosome
 #' @param DIR a directory path for finding the 2d scan results
 #' @export
+#' @importFrom utils read.table
 
-write_pleio_peaks_file <- function(run_num, map = pm,
+write_pleio_peaks_file <- function(run_num, map,
                                    DIR = paste0("results-chtc/pvl400-run")
 ){
   i <- 1

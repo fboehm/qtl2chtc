@@ -2,6 +2,7 @@
 #'
 #' @param directory path to directory that contains the collection of files
 #' @export
+#' @importFrom utils read.table
 
 calc_lrt_dir <- function(directory){
   dir(directory) -> fns
@@ -9,7 +10,7 @@ calc_lrt_dir <- function(directory){
   i <- 1
   for (fn in fns){
     read.table(file.path(directory, fn)) -> scan_out
-    calc_lrt(as.matrix(scan_out)) -> lrt[i]
+    qtl2pleio::calc_lrt(as.matrix(scan_out)) -> lrt[i]
     i <- i + 1
   }
   cbind(fns, lrt) -> foo

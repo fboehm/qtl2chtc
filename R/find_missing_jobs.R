@@ -4,6 +4,7 @@
 #' @param njobs number of jobs expected - typically 400 or 16000
 #' @param outfile file path for writing missing job ids
 #' @export
+#' @importFrom utils write.table
 #'
 find_missing_jobs <- function(DIR = "results-chtc/boot400-run1", njobs = 16000, outfile = "bad-jobs-boot400-run1.txt"){
   dir(DIR) -> fns
