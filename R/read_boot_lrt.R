@@ -10,7 +10,7 @@ read_boot_lrt <- function(job_num = 0, total_number_of_scans = 400,
                           boot_run_num = 1
 ){
   stopifnot(job_num < total_number_of_scans)
-  DIR <- paste0("~/Box Sync/attie/research-notebook/results-chtc/boot400-run", boot_run_num)
+  DIR <- paste0("results-chtc/boot400-run", boot_run_num)
   nfiles <- total_number_of_scans / nlrt_per_file
   out <- list()
   job_nums <- job_num + (0:(nfiles - 1)) * total_number_of_scans
