@@ -14,7 +14,7 @@ read_boot_lrt <- function(job_num = 0, total_number_of_scans = 400,
   nfiles <- total_number_of_scans / nlrt_per_file
   out <- list()
   job_nums <- job_num + (0:(nfiles - 1)) * total_number_of_scans
-  fns <- paste0(job_nums, "_sim1_sim2-run", boot_run_num, ".txt")
+  fns <- dir(DIR)
 
   for (i in 1:nfiles){
     fn <- file.path(DIR, fns[i])
