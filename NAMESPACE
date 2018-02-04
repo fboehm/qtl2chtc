@@ -3,6 +3,7 @@
 export(calc_lrt_dir)
 export(find_missing_jobs)
 export(make_results_table)
+export(make_results_table2)
 export(read_boot_lrt)
 export(write_pleio_peaks_file)
 importFrom(utils,read.table)
