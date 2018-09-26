@@ -7,7 +7,7 @@
 calc_lrt_dir(directory)
 }
 \arguments{
-\item{directory}{path to directory that contains the collection of files}
+\item{directory}{path to directory that contains the collection of files.}
 }
 \description{
 Calculate likelihood ratio tests for all files in a single directory. Each file contains output of a two-dimensional scan.

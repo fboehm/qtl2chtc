@@ -1,6 +1,6 @@
 #' Calculate likelihood ratio tests for all files in a single directory. Each file contains output of a two-dimensional scan.
 #'
-#' @param directory path to directory that contains the collection of files
+#' @param directory path to directory that contains the collection of files.
 #' @export
 #' @importFrom utils read.table
 
@@ -10,9 +10,9 @@ calc_lrt_dir <- function(directory){
   i <- 1
   for (fn in fns){
     read.table(file.path(directory, fn)) -> scan_out
-    qtl2pleio::calc_lrt(as.matrix(scan_out)) -> lrt[i]
+    qtl2pleio::calc_lrt_tib(scan_out) -> lrt[i]
     i <- i + 1
   }
-  cbind(fns, lrt) -> foo
+  tibble::tibble(fns, lrt) -> foo
   return(foo)
 }
